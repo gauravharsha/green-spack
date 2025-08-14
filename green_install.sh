@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Prerequisite -- assuming this already exists in the cluster PC
-apt update
-apt install file bzip2 ca-certificates g++ gcc gfortran git gzip lsb-release patch python3 tar unzip xz-utils zstd
+# # Prerequisite -- assuming this already exists in the cluster PC
+# apt update
+# apt install file bzip2 ca-certificates g++ gcc gfortran git gzip lsb-release patch python3 tar unzip xz-utils zstd
 
 # # Uncomment to download and use spack
 # git clone --depth=2 https://github.com/spack/spack.git
