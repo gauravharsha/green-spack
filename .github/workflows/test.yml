@@ -38,5 +38,6 @@ jobs:
           
       - name: Install spack dependencies and Build the code
         run: |
+          set -euo
           chmod +x green_install.sh
           ./green_install.sh
