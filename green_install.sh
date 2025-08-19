@@ -35,7 +35,7 @@ git clone https://github.com/Green-Phys/seet_solvers
 
 # 1. install ALPSCore
 cmake -S ALPSCore -B build --install-prefix `pwd`/install/ALPSCore
-cmake --build build -j 32
+cmake --build build -j 4
 cmake --build build -t test install
 rm -rf build
 
@@ -43,7 +43,7 @@ rm -rf build
 cmake -S arpack-ng -B build \
   --install-prefix `pwd`/install/arpack  -DMPI=ON \
   -DCMAKE_BUILD_TYPE=Release
-cmake --build build -j 32
+cmake --build build -j 4
 cmake --build build -t test install
 rm -rf build
 
@@ -52,7 +52,7 @@ cmake -S EDLib -B build --install-prefix `pwd`/install/EDLib \
   -DCMAKE_BUILD_TYPE=Release \
   -DALPSCore_DIR=`pwd`/install/ALPSCore/share/ALPSCore \
   -DARPACK_DIR=`pwd`/install/arpack -DUSE_MPI=MPI
-cmake --build build -j 32
+cmake --build build -j 4
 cmake --build build -t install
 rm -rf build
 
@@ -64,7 +64,7 @@ cmake -S seet_solvers -B build \
    -DARPACK_DIR=`pwd`/install/arpack \
    -DEDLib_DIR=`pwd`/install/EDLib/share/EDLib/cmake \
    -DUSE_MPI=MPI
-cmake --build build -j 32
+cmake --build build -j 4
 rm -rf build
 
 # 5. install SEET/MBPT code
@@ -75,6 +75,6 @@ cd ..
 cmake -S green-mbpt -B build \
    --install-prefix `pwd`/install/green-mbpt \
    -DCMAKE_BUILD_TYPE=Release
-cmake --build build -j 32
+cmake --build build -j 4
 cmake --build build -t test install
 rm -rf build
