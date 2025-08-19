@@ -12,7 +12,7 @@ git clone --depth=2 https://github.com/spack/spack.git
 . spack/share/spack/setup-env.sh
 
 # load spack
-export SPACK_ROOT=$HOME
+export SPACK_ROOT=.
 source $SPACK_ROOT/spack/share/spack/setup-env.sh
 
 # Dependencies for Green
