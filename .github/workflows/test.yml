@@ -31,11 +31,6 @@ jobs:
           sudo apt update
           sudo apt install file bzip2 ca-certificates g++ gcc gfortran git gzip cmake lsb-release patch python3 tar unzip xz-utils zstd
           
-      - name: Install spack
-        run: |
-          git clone --depth=2 https://github.com/spack/spack.git
-          . spack/share/spack/setup-env.sh
-          
       - name: Install spack dependencies and Build the code
         run: |
           set -euo
